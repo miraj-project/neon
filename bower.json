@@ -1,0 +1,24 @@
+{
+    "name": "miraj",
+    "description": "",
+    "main": "",
+    "moduleType": [],
+    "license": "MIT",
+    "homepage": "",
+    "private": true,
+    "ignore": [
+	"**/.*",
+	"node_modules",
+	"bower_components",
+	"resources/polymer",
+	"test",
+	"tests"
+    ],
+    "dependencies": {
+	"neon-animation": "PolymerElements/neon-animation#latest"
+    },
+    "resolutions": {
+	"polymer": "^1.2.0",
+	"webcomponentsjs": "0.7.18"
+    }
+}
