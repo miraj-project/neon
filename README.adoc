@@ -1,5 +1,5 @@
 # polymer.neon
-Polymer Neon Elements
+Polymer Neon clojure functions
 
 # usage
 
