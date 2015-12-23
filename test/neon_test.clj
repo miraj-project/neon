@@ -1,11 +1,15 @@
 (ns neon-test
-  (:require [polymer.neon :as neon]))
+  (:require [polymer.neon :as neon]
+            [polymer.neon.animation :as anim]))
 
-(println neon/polymer-neon-tags)
+(println neon/tags)
+(println anim/animation-tags)
 
 (neon/animation)
 (neon/animatable)
-(neon/fade-in)
 (neon/animated-pages)
+
+(anim/cascaded)
+(anim/fade-in)
 
 

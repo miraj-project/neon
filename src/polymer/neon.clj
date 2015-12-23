@@ -3,18 +3,11 @@
 
 (alter-meta! *ns* (fn [m] (assoc m :co-ns true)))
 
-(def polymer-neon-tags
+(def tags
   ["animation"
+   "animations"
    "animated-pages"
-   "animatable"
-   "fade-in", "fade-out"
-   "scale-up", "scale-down"
-   "slide-up", "slide-down"
-   "slide-left", "slide-right"
-   "slide-from-left", "slide-from-right"
-   "transform"
-   "hero"
-   "ripple"])
+   "animatable"])
 
 ;; (def html5-pragma-directives
 ;;   "meta http-equiv pragma directives
@@ -34,4 +27,4 @@
 
 ;; (make-meta-tag-fns html5-pragma-directives)
 
-(make-tag-fns "neon-" polymer-neon-tags nil)
+(make-tag-fns "neon-" tags nil)
