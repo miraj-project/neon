@@ -6,10 +6,20 @@
 (println anim/animation-tags)
 
 (neon/animation)
+(neon/animations)
 (neon/animatable)
-(neon/animated-pages)
+(neon/pages)
 
 (anim/cascaded)
 (anim/fade-in)
+
+(require '(polymer [neon :as neon]))
+(require '(polymer.neon [animations :as anim]))
+(anim/slide-down)
+
+(require '(polymer.neon [behaviors :as beh]))
+(beh/animatable)
+(beh/shared-animatable)
+
 
 

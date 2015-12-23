@@ -1,6 +1,56 @@
-# polymer.neon
+polymer.neon
+============
+
 Polymer Neon clojure functions
 
-# usage
+= usage
 
 link:http://clojars.org/polymer/neon[image:http://clojars.org/polymer/neon/latest-version.svg[]]
+
+= mappings
+
+== objects
+
+[source,clojure]
+----
+(require '(polymer [neon :as neon]))
+(neon/animatable ...) => <neon-animatable>
+(neon/pages ...)      => <neon-animated-pages>
+(neon/animation ...) => <neon-animation>
+(neon/animations ...) => <neon-animations>
+----
+
+== animations
+
+[source,clojure]
+----
+(require '(polymer.neon [animations :as anim]))
+(anim/cascaded ...) => <cascaded-animation>
+(anim/fade-in ...) => <fade-in-animation>
+(anim/fade-out ...) => <fade-out-animation>
+(anim/hero ...) => <hero-animation>
+(anim/opaque ...) => <opaque-animation>
+(anim/reverse-ripple ...) => <reverse-ripple-animation>
+(anim/ripple ...) => <ripple-animation>
+(anim/scale-down ...) => <scale-down-animation>
+(anim/scale-up ...) => <scale-up-animation>
+(anim/slide-down ...) => <slide-down-animation>
+(anim/slide-up ...) => <slide-up-animation>
+(anim/slide-left ...) => <slide-left-animation>
+(anim/slide-right ...) => <slide-right-animation>
+(anim/slide-from-left ...) => <slide-from-left-animation>
+(anim/slide-from-right ...) => <slide-from-right-animation>
+(anim/transform ...) => <transform-animation>
+----
+
+== behaviors
+
+[source,clojure]
+----
+(require '(polymer.neon [behaviors :as beh]))
+(beh/animatable ...) => <neon-animatable-behavior>
+(beh/animation ...)  => <neon-animation-behavior>
+(beh/animation-runner ...)  => <neon-animation-runner-behavior>
+(beh/shared-animatable ...) => <neon-shared-element-animatable-behavior>
+(beh/shared-animation ...)  => <neon-shared-element-animatable-behavior>
+----
