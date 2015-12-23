@@ -1,30 +1,21 @@
 (ns polymer.neon
-  (:require [miraj.markup :refer [make-tag-fns]]))
+  (:require [miraj.markup :refer [make-resource-fns]]))
 
 (alter-meta! *ns* (fn [m] (assoc m :co-ns true)))
 
-(def tags
-  ["animation"
-   "animations"
-   "animated-pages"
-   "animatable"])
+(def neon-tags
+  ; fn-tag,  elt-tag,  elt-uri,  docstring
+  [['animatable :neon-animatable "neon-animation/neon-animatable.html"
+    "tag: <neon-animatable>
+    uri:  neon-animation/neon-animatable.html"]
+   ['animation :neon-animation "neon-animation/neon-animation.html"
+    "tag: <neon-animation>
+    uri:  neon-animation/neon-animation.html"]
+   ['animations :neon-animations "neon-animation/neon-animations.html"
+    "tag: <neon-animations>
+    uri:  neon-animation/neon-animations.html"]
+   ['pages :neon-animated-pages "neon-animation/neon-animated-pages.html"
+    "tag: <neon-animated-pages>
+    uri:  neon-animation/neon-animated-pages.html"]])
 
-;; (def html5-pragma-directives
-;;   "meta http-equiv pragma directives
-;;   http://www.w3.org/html/wg/drafts/html/master/semantics.html#pragma-directives"
-;;   ["http-equiv"
-;;    ;; {fn-name [elt-tag <validation rule>]}
-;;   {:content-language ["content-language" {:non-conforming "Authors are
-;;   encouraged to use the lang attribute instead."}]
-;;    :content-type ["content-type" :encoding-decl]
-;;    :default-style ["default-style" :string]
-;;    :refresh ["refresh" :refresh-syntax]
-;;    :set-cookie ["set-cookie" {:non-conforming "Real HTTP headers should be used instead."}]
-;;    ;; HTML 5.1
-;;    :content-security-policy ["Content-Security-Policy" :string]
-;;    ;; :x-ua-compatible
-;;    }])
-
-;; (make-meta-tag-fns html5-pragma-directives)
-
-(make-tag-fns "neon-" tags nil)
+(make-resource-fns :html neon-tags)
